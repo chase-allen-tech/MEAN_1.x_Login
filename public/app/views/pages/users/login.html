@@ -1,0 +1,35 @@
+<div class="page-header">
+        <h1>Login</h1>
+    </div>
+
+    <form ng-submit="main.doLogin(loginData);">
+
+        <label>Username: </label> 
+        <input class="form-control" type="text" name="username" placeholder="enter username" ng-model="main.loginData.username"/>
+        <br>
+
+        <label>Password: </label> 
+        <input class="form-control" type="password" name="password" placeholder="enter password" ng-model="main.loginData.password" />
+        <br>
+    
+        <div ng-show="main.successMessage" class="row show-hide-message">
+            <div class="alert alert-success">
+                {{main.successMessage}}
+            </div>
+        </div>
+
+    
+        <div ng-show="main.errorMessage" class="row show-hide-message">
+                <div class="alert alert-danger">
+                    {{main.errorMessage}}
+                </div>
+        </div>
+
+        <button ng-show="!main.successMessage" class="btn btn-primary" type = submit>Login</button>
+    </form>
+
+        <!-- <div ng-show="register.loading" class="jumbotron text-center">
+            <span class="glypicon glyphicon-repeat"></span>
+            <p>Loading...</p>
+        </div>
+     -->
